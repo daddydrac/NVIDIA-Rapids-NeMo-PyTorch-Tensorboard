@@ -27,6 +27,8 @@ Port 8888 is the notebook and 6006 is Tensorboard for analysis and debugging
 
 ### Set up TensorBoard
 
+This is optional because you can launch Tensorboard right from Jupyter Notebook
+
 1. Get the <container id> (you only need the first 3 char's): ``` docker ps ```
 
 2. Then, exec into the container: ``` docker exec -u root -t -i <container id> /bin/bash ```
