@@ -40,6 +40,8 @@ Press tab to see what methods you have access to by clicking tab.
 
 ### Set up TensorBoard
 
+This is optional because you can simply launch Tensorbord right from Jupyter Notebook.
+
 1. Get the <container id> (you only need the first 3 char's): ``` docker ps ```
 
 2. Then, exec into the container: ``` docker exec -u root -t -i <container id> /bin/bash ```
