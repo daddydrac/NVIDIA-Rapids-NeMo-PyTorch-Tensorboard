@@ -109,8 +109,9 @@ RUN pip install -U spacy
 RUN pip install gensim
 RUN pip install tensorboard
 
+
 VOLUME /workspace
-WORKDIR /
+WORKDIR /workspace
 EXPOSE 8888 6006
 
-CMD ["bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/ --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.custom_display_url='http://localhost:8888'"]
+CMD ["bash", "-c", "source /etc/bash.bashrc && jupyter notebook --notebook-dir=/workspace --ip 0.0.0.0 --no-browser --allow-root --NotebookApp.custom_display_url='http://localhost:8888'"]

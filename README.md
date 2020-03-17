@@ -6,7 +6,7 @@ For some reason with `DOCKER_BUILDKIT`, it takes a very long while for conda rep
 ### Features
 
 - NVIDIA NeMo
-- Jupyterlab & notebook
+- Jupyter Notebook
 - CUDA 10.0
 - CuPy for CUDA 10
 - Dask distributed
@@ -21,17 +21,17 @@ For some reason with `DOCKER_BUILDKIT`, it takes a very long while for conda rep
 ### How to build and launch notebook
 Port 8888 is the notebook and 6006 is Tensorboard for analysis and debugging
 
-1. ``` DOCKER_BUILDKIT=1 docker build --build-arg NEMO_VERSION=$(git describe --tags) -t nemo . ```
+1. ``` DOCKER_BUILDKIT=1 docker build --build-arg NEMO_VERSION=$(git describe --tags) -t nlp . ```
 
-2. ``` docker run --runtime=nvidia -it --rm -v <nemo_github_folder>:/NeMo --shm-size=8g -p 8888:8888 -p 6006:6006 --ulimit memlock=-1 --ulimit stack=67108864 nemo ```
+2. ``` docker run --runtime=nvidia -it --rm -v nemo:/NeMo --shm-size=8g -v "${PWD}:/workspace"  -p 8888:8888 -p 6006:6006 --ulimit memlock=-1 --ulimit stack=67108864 nlp```
 
 3. Click the `localhost` link in the command line with the jupyter security token, it will automatically launch in browser for you.
 
-4. Navigate to `workspace/`
+4. Navigate to `workspace/` to see demos and examples
+
+5. Navigate to `workspace/workspace` where your custom application files you develop will be mounted (this is where you do your work).
 
 ### Set up TensorBoard
-
-This is optional because you can launch Tensorboard right from Jupyter Notebook
 
 1. Get the <container id> (you only need the first 3 char's): ``` docker ps ```
 
