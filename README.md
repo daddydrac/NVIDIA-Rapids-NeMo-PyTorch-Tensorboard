@@ -3,6 +3,13 @@ NeMo is a toolkit for defining and building new state of the art deep learning m
 
 For some reason with `DOCKER_BUILDKIT`, it takes a very long while for conda repo's to resolve. So installation of any Conda repo and Rapids AI takes a very long time. (Just let it run until it figures itself out). 
 
+NLP Container, requirements:
+
+- Docker > v19.x
+- nvidia-docker => v2.x
+- docker container runtime == latest 
+
+
 ### Features
 
 - NVIDIA NeMo
