@@ -1,4 +1,4 @@
-# TensorRT-NVIDIA-Neural-Modules-NeMo
+# Accelerated GPU NLP Toolkit: RAPIDS-AI, PyTorch, NeMo, Tensorboard, TensorRT, CUDA 10.1
 NeMo is a toolkit for defining and building new state of the art deep learning models for Conversational AI applications  Goal of the NeMo toolkit is to make it possible for researchers to easily and safely compose complex neural network architectures for conversational AI using reusable components. Built for speed, NeMo can scale out training to multiple GPUs and multiple nodes.
 
 For some reason with `DOCKER_BUILDKIT`, it takes a very long while for conda repo's to resolve. So installation of any Conda repo and Rapids AI takes a very long time. (Just let it run until it figures itself out). 
