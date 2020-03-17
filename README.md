@@ -7,13 +7,12 @@ For some reason with `DOCKER_BUILDKIT`, it takes a very long while for conda rep
 
 - NVIDIA NeMo
 - Jupyter Notebook
-- CUDA 10.0
-- CuPy for CUDA 10
+- CUDA 10.1 + TensorRT release 7.0
 - Dask distributed
 - NLTK
 - SpaCy
 - Scipy
-- gensim
+- Gensim
 - Tensorboard
 - PyTorch
 
@@ -27,9 +26,17 @@ Port 8888 is the notebook and 6006 is Tensorboard for analysis and debugging
 
 3. Click the `localhost` link in the command line with the jupyter security token, it will automatically launch in browser for you.
 
-4. Navigate to `workspace/` to see demos and examples
+4. Navigate to `/examples` to see demos and examples
 
-5. Navigate to `workspace/workspace` where your custom application files you develop will be mounted (this is where you do your work).
+5. Navigate to `/workspace` where your custom application files you develop will be mounted. (This is where you do your work).
+
+
+### Built in code hinting in Jupyter Notebook ###
+
+Press tab to see what methods you have access to by clicking tab.
+
+![jupyter-tabnine](https://raw.githubusercontent.com/wenmin-wu/jupyter-tabnine/master/images/demo.gif)
+
 
 ### Set up TensorBoard
 

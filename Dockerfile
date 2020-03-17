@@ -87,8 +87,8 @@ COPY --from=nemo-deps /tmp/trt-oss/TensorRT/build/libnvinfer_plugin.so* /usr/lib
 
 # Check that NEMO_VERSION is set. Build will fail without this. Expose NEMO and base container
 # version information as runtime environment variable for introspection purposes
-RUN /usr/bin/test -n "$NEMO_VERSION" && \
-    /bin/echo "export NEMO_VERSION=${NEMO_VERSION}" >> /root/.bashrc && \
+RUN /usr/bin/test -n "0.9.0" && \
+    /bin/echo "export NEMO_VERSION=0.9.0" >> /root/.bashrc && \
     /bin/echo "export BASE_IMAGE=${BASE_IMAGE}" >> /root/.bashrc
 RUN --mount=from=nemo-src,target=/tmp/nemo cd /tmp/nemo && pip install ".[all]"
 
@@ -108,7 +108,7 @@ RUN pip install nltk
 RUN pip install -U spacy
 RUN pip install gensim
 RUN pip install tensorboard
-
+RUN pip install jupyter-tabnine
 
 VOLUME /workspace
 WORKDIR /workspace
