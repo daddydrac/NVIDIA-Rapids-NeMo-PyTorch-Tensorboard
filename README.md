@@ -35,7 +35,7 @@ Port 8888 is the notebook and 6006 is Tensorboard for analysis and debugging
 
 After the DOCKER_BUILDKIT cmd, run:
 
-sudo docker run -it --rm -v nemo:/NeMo --shm-size=8g -v "<DGX_USER_FILE_PATH_HERE>:/workspace" -p 9999:8888 -p 6006:6006 --ulimit memlock=-1 --ulimit stack=67108864 --runtime=nvidia --detach nlp
+ ``` sudo docker run -it --rm -v nemo:/NeMo --shm-size=8g -v "<DGX_USER_FILE_PATH_HERE>:/workspace" -p 9999:8888 -p 6006:6006 --ulimit memlock=-1 --ulimit stack=67108864 --runtime=nvidia --detach nlp  ```
 
 
 3. Click the `localhost` link in the command line with the jupyter security token, it will automatically launch in browser for you.
